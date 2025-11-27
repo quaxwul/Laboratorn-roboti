@@ -1,0 +1,173 @@
+/* Загальні налаштування */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Шапка */
+.site-header {
+    background-color: #111827; /* темний фон */
+    color: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.site-title {
+    font-size: 22px;
+}
+
+/* Меню */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #2563eb; /* hover-ефект */
+}
+
+/* Основний контент */
+.main-content {
+    padding: 30px 40px;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Блоки продуктів */
+.products-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.product-name {
+    font-size: 18px;
+}
+
+.product-desc {
+    font-size: 14px;
+}
+
+/* Кнопка "Детальніше" */
+.details-btn {
+    margin-top: auto;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.details-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px); /* невеликий hover-ефект */
+}
+
+/* Футер */
+.site-footer {
+    margin-top: 30px;
+    padding: 20px 40px;
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.site-footer a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-contacts,
+.footer-socials {
+    margin-bottom: 10px;
+}
+
+.footer-socials ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .products-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
